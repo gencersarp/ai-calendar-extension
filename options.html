@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Event Adder Options</title>
+    <link rel="stylesheet" href="css/style.css">
+     <meta charset="UTF-8">
+     <style>
+        /* Add some specific styles for options page clarity */
+        body { width: 400px; } /* Slightly wider for more text */
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"] { width: 95%; padding: 6px; margin-bottom: 10px; }
+        .instructions { font-size: 0.9em; margin-bottom: 15px; line-height: 1.4; }
+        .instructions strong { color: #333; }
+        .instructions a { color: #1a73e8; }
+        .instructions code { background-color: #f0f0f0; padding: 2px 4px; border-radius: 3px; font-family: monospace;}
+     </style>
+</head>
+<body>
+    <h2>Settings</h2>
+
+    <div class="instructions">
+        <p>
+            <strong>Why do I need an API Key?</strong><br>
+            This extension uses Google's AI (Gemini) to understand the event text. To use Google's AI services, an API key is required. By providing your <strong>own free key</strong>, the AI usage counts towards your personal free quota, keeping this extension free to use. Your key is stored securely only within your browser's local storage for this extension.
+        </p>
+        <p>
+            <strong>How to get your key:</strong><br>
+            1. Visit the <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio API Key page</a>.<br>
+            2. Sign in with your Google Account.<br>
+            3. Click "<strong>Create API key in new project</strong>" (or existing one).<br>
+            4. Copy the generated API key (it's a long string of letters and numbers).<br>
+            5. Paste it into the box below and click "Save Key".
+        </p>
+    </div>
+
+    <label for="apiKey">Your Google AI (Gemini) API Key:</label>
+    <input type="text" id="apiKey" placeholder="Paste your API key here (e.g., AIzaSy...)">
+
+    <button id="saveButton">Save Key</button>
+    <p id="optionsStatus"></p>
+
+
+    <script src="options.js"></script>
+</body>
+</html>

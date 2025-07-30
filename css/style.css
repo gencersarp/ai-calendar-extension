@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 95%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+#status {
+    font-size: 0.9em;
+    margin-top: 10px;
+    min-height: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
