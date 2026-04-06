@@ -54,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- END NEW Checks ---
 
 
+// Ctrl+Enter / Cmd+Enter submits without leaving the textarea
+eventTextInput.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        if (!addEventButton.disabled) {
+            addEventButton.click();
+        }
+    }
+});
+
 addEventButton.addEventListener('click', () => {
     const text = eventTextInput.value.trim();
     // Don't check for API key here again, background script handles it.
